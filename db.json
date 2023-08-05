@@ -1,10 +1,5 @@
 {
-  "posts": [
-    {
-      "title": "harry potter",
-      "id": 1
-    }
-  ],
+  "posts": [],
   "comments": [],
   "profile": {
     "name": "typicode"
