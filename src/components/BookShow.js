@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import BookEdit from './BookEdit';
 
-export default function BookShow( { book, onDelete }) {
+export default function BookShow( { book, onDelete, onEdit }) {
     const [showEdit, setShowEdit] = useState(false);
 
 
@@ -15,7 +15,7 @@ export default function BookShow( { book, onDelete }) {
 
     let content = <h3> {book.title} </h3>;
     if (showEdit) {
-        content = <BookEdit book={book} />;
+        content = <BookEdit onEdit={onEdit} book={book} />;
     }
     
     return (
