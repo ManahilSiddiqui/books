@@ -5,7 +5,7 @@ import BookShow from './BookShow';
 
 
 export default function BookList({ books, onDelete, onEdit }) {
-    const value = useContext(BooksContext);
+    const { count, incrementCount } = useContext(BooksContext);
 
     
     
@@ -17,7 +17,8 @@ export default function BookList({ books, onDelete, onEdit }) {
     return (
 
         <div className='book-list'>
-            {value}
+            {count}
+            <button onClick={incrementCount}>Click</button>
             {renderedBooks} 
         
         </div>
