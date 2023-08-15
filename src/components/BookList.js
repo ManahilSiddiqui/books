@@ -4,9 +4,12 @@ import BookShow from './BookShow';
 
 
 
-export default function BookList({ books, onDelete, onEdit }) {
+export default function BookList() {
+    const { books } = useContext(BooksContext);
+
+
     const renderedBooks = books.map((book) => {
-        return <BookShow onEdit={onEdit} onDelete={onDelete} key={book.id} book={book} />;
+        return <BookShow key={book.id} book={book} />;
     });
 
 
